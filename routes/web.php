@@ -67,9 +67,11 @@ Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
 Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
 
-Route::get('/pegawai','PegawaiControllers@index');
-Route::get('/pegawai/tambah','PegawaiControllers@tambah');
-Route::post('/pegawai/store','PegawaiControllers@store');
-Route::get('/pegawai/edit/{id}','PegawaiControllers@edit');
-Route::post('/pegawai/update','PegawaiControllers@update');
-Route::get('/pegawai/hapus/{id}','PegawaiControllers@hapus');
+Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
+Route::get('/pegawai/tambah','App\Http\Controllers\PegawaiControlles@tambah');
+Route::post('/pegawai/store','App\Http\Controllers\PegawaiController@store');
+Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiController@edit');
+Route::post('/pegawai/update','App\Http\Controllers\PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus');
+Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+Route::get('/pegawai/lihat/{id}','App\Http\Controllers\PegawaiController@viewPegawai');
