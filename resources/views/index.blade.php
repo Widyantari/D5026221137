@@ -1,41 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('master2')
+@section('title','Database Pegawai')
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
+@section('judul_halaman')
+    <h2>Data Pegawai</h2>
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+    <a href="/pegawai/tambah" class="btn btn-primary my-3"> + Tambah Pegawai Baru</a>
 
-	<br/>
-	<br/>
+    <br />
+@endsection
+	{{-- <style type="text/css">
+		.pagination li{
+			float: left;
+			list-style-type: none;
+			margin:5px;
+		}
+	</style> --}}
 
+	{{-- <h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
+	<h3>Data Pegawai</h3> --}}
+
+@section('konten')
 	<table border="1">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
 			<th>Umur</th>
 			<th>Alamat</th>
-			<th>Opsi</th>
 		</tr>
 		@foreach($pegawai as $p)
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
+			<td @if($p->pegawai_umur <= 30)
+                class = "bg-dark text-light"
+                @elseif($p->pegawai_umur >= 30)
+                class = "bg-danger text-light"
+                @endif
+            >{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
-			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
-				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
-			</td>
 		</tr>
 		@endforeach
 	</table>
 
+	<br/>
 
-</body>
-</html>
+
+
+	{{ $pegawai->links() }}
+
+@endsection
