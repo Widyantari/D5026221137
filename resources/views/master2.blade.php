@@ -18,7 +18,7 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="/karyawan">Karyawan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Link 2</a>
@@ -32,7 +32,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/pegawai">Pegawai</a>
                     <a class="dropdown-item" href="/bagian">Bagian</a>
-                    <a class="dropdown-item" href="#">Link 3</a>
+                    <a class="dropdown-item" href="/karyawan">Karyawan</a>
                 </div>
             </li>
         </ul>

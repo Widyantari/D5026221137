@@ -23,8 +23,6 @@
             <th>Nama Lengkap</th>
             <th>Divisi</th>
             <th>Departemen</th>
-            <th>Opsi</th>
-
 
         </tr>
         @foreach ($karyawan as $s)
@@ -36,10 +34,10 @@
 
 
                 <td>
-                    <a href="/bagian/hapus/{{ $s->kodepegawai }}" class="btn btn-danger">Hapus Data</a>
+                    <a href="/bagian/hapus/{{ $s->kodebagian }}" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
         @endforeach
+        <a href="/karyawan/tambah" class="btn btn-primary"> Tambah Bagian</a>
     </table>
-    <a href="/karyawan/tambah" class="btn btn-primary"> Tambah Data</a>
 @endsection

@@ -87,3 +87,19 @@ Route::post('/bagian/update','App\Http\Controllers\BagianController@update');
 Route::get('/bagian/hapus/{id}','App\Http\Controllers\BagianController@hapus');
 Route::get('/bagian/view/{id}','App\Http\Controllers\BagianController@view');
 Route::get('/bagian/cari','App\Http\Controllers\BagianController@cari');
+
+//eas
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@index');
+Route::get('/karyawan/tambah','App\Http\Controllers\KaryawanController@tambah');
+Route::post('/karyawan/store','App\Http\Controllers\KaryawanController@store');
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
+Route::get('/karyawan/cari','App\Http\Controllers\KaryawanController@cari');
+Route::get('/karyawan/input', 'App\Http\Controllers\KaryawanController@input');
+Route::get('/karyawan/proses', 'App\Http\Controllers\KaryawanController@proses');
+
+
+
+
+
+
+
