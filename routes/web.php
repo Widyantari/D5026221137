@@ -77,3 +77,13 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 
 //pagination
 Route::get('/pegawai','App\Http\Controllers\PegawaiController@index');
+
+//tugas pra eas
+Route::get('/bagian','App\Http\Controllers\BagianController@index');
+Route::get('/bagian/tambah','App\Http\Controllers\BagianController@tambah');
+Route::post('/bagian/store','App\Http\Controllers\BagianController@store');
+Route::get('/bagian/edit/{id}','App\Http\Controllers\BagianController@edit');
+Route::post('/bagian/update','App\Http\Controllers\BagianController@update');
+Route::get('/bagian/hapus/{id}','App\Http\Controllers\BagianController@hapus');
+Route::get('/bagian/view/{id}','App\Http\Controllers\BagianController@view');
+Route::get('/bagian/cari','App\Http\Controllers\BagianController@cari');
